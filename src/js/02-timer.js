@@ -1,3 +1,4 @@
+'use strict';
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import 'flatpickr/dist/themes/material_blue.css';
@@ -24,9 +25,6 @@ import Notiflix from 'notiflix';
         firstDayOfWeek: 1,
       },
       onClose: function (selectedDates, dateStr, instance) {
-        // onClose: () => {
-        //     this.invalidDate = true;
-        //  }
         if (selectedDates[0] - new Date() > 0) {
           Notiflix.Notify.success('Press start');
           timeCounter.timeCounterSet();

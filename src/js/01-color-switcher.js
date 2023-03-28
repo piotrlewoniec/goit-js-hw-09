@@ -1,3 +1,4 @@
+'use strict';
 (() => {
   const backGroundChanger = {
     startBtn: document.querySelector('[data-start]'),

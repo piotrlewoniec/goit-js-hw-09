@@ -1,7 +1,9 @@
+'use strict';
 import Notiflix from 'notiflix';
 (() => {
   const promisesGenerator = {
     formBind: document.querySelector('.form'),
+    //function
     createPromise: function (position, delay) {
       const shouldResolve = Math.random() > 0.3;
       if (shouldResolve) {
@@ -16,6 +18,7 @@ import Notiflix from 'notiflix';
         );
       }
     },
+    //function with delay
     createPromiseDelaied: function (position, delay) {
       const shouldResolve = Math.random() > 0.3;
       setTimeout(() => {
@@ -32,6 +35,7 @@ import Notiflix from 'notiflix';
         }
       }, delay);
     },
+    //function with real promise
     createPromiseRealOne: function (position, delay) {
       return new Promise((resolve, reject) => {
         const shouldResolve = Math.random() > 0.3;
